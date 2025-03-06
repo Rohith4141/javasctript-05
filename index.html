@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+nav{
+    margin-right: 5%;
+  
+}
+ul{
+    display: flex;
+    gap: 20%;
+   list-style: none;
+}
+h3{
+    padding-left:2%;
+}
+.parent{
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    /* justify-content: space-around; */
+    margin-top: 3%;
+}
+.parent1{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+.imgcls{
+    margin-top: 10%;
+    
+    
+}
+.heading3{
+    color: gray;
+}
+.footer{
+    background-color: white;
+    color: white;
+    height: 10vh;
+    margin-top: 3%;
+}
+.footer>h3{
+    padding-left: 40%;
+    padding-top: 2%;
+}
+
+</style>
+<body>
+    <script>
+        var header=document.createElement("header")
+        console.log(header)
+        var architect=document.createElement("h3")
+        architect.innerHTML="FOOD"
+        var nav=document.createElement("nav")
+        nav.innerHTML="<ul> <li><h3>MENU</h3></li> <li><h3>Contact</h3></li>"
+        var section1=document.createElement("section")
+        console.log(section1)
+        var img1=document.createElement("img")
+        img1.setAttribute("src","https://www.w3schools.com/w3images/hamburger.jpg")
+        section1.append(img1)
+        var project=document.createElement('h2')
+        console.log(project)
+        project.innerText=("ITEMS")
+
+        var container=document.createElement("div")
+        console.log(container)
+        var imageArray=["https://www.w3schools.com/w3images/sandwich.jpg","https://www.w3schools.com/w3images/steak.jpg","https://www.w3schools.com/w3images/wine.jpg", "https://www.w3schools.com/w3images/popsicle.jpg","https://www.w3schools.com/w3images/salmon.jpg","https://www.w3schools.com/w3images/sandwich.jpg","https://www.w3schools.com/w3images/croissant.jpg","https://www.w3schools.com/w3images/cherries.jpg"]
+        var paraArray=["<h3>The Perfect Sandwich,<br> A Real NYC Classic</br></h3>", "<h3>Let Me Tell You About<br> This Steak</h3></br>", "<h3>Once Again, Robust Wine and Vegetable Pasta</h3> ", "<h3>All I Need Is a Popsicle</h3>", "<h3>Summer Salmon For Your Skin</h3>", "<h3>The Perfect Sandwich, A Real Classic</h3>", "<h3>Le French</h3>", "<h3>Cherries, interrupted</h3>"] 
+        for(i=0; i<=7;i++){
+        var child=document.createElement("div")
+      
+        var img2=document.createElement("img")
+       
+        img2.setAttribute("src",imageArray[i])
+        img2.setAttribute("width", "80%")
+        img2.setAttribute("height", "80%")
+        var para=document.createElement("p")
+        
+        para.innerHTML=paraArray[i]
+        child.append(img2,para)
+        container.append(child)
+        }
+        var about=document.createElement("h2")
+       
+        about.innerText="SPECIAL ITEMS"
+        var about_content=document.createElement("p")
+        // console.log(about_content)
+        about.innerText="About"
+        var about_content=document.createElement("p")
+        // console.log(about_content)
+        about_content.innerText="The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients."
+        
+
+
+       //card section2 creation
+       var container1=document.createElement("div")
+       console.log(container1)
+       var text1Array=["Kakinada ", "Atreyapuram ", "Bandar", "Hyderabad"]
+       var text2Array=["Kaja", " Putharekulu", "Laddu", "Desserts"]
+       var img3Array=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH9Re7PuJjGwgudvOYbfoHWemal6qAMhKy2A&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_kO-8FsbuOL05g6GwZs5GtpQ_7_s4hL2rg&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMBo14Cq2650L0kmnPvPU2WOvAa1kQ9tIMIw&s", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB63E9ROZws2OVZfM8-Bh3owVb1BqhbtJEWQ&s"]
+       for(i=0;i<=3; i++){
+
+       var child1=document.createElement("div")
+    //    console.log(child1)
+       var img3=document.createElement("img")
+    //    console.log(img3)
+       img3.setAttribute("src", img3Array[i]);
+       img3.setAttribute("width", "90%")
+       img3.setAttribute("height", "70%")
+       var text1=document.createElement("h2")
+    //    console.log(text1)
+       text1.innerText=text1Array[i]
+       var text2=document.createElement("h3")
+       text2.classList.add("heading3")
+    //    console.log(text2)
+       text2.innerText=text2Array[i]
+       child1.append(img3,text1,text2)
+       container1.append(child1)
+       }
+      
+      //creation for classes for styling
+      container1.classList.add("parent1")
+      container.classList.add("parent")
+      var img4=document.createElement("img")
+      console.log(img4)
+      img4.setAttribute("src", "https://www.w3schools.com/w3images/map.jpg")
+      img4.classList.add("imgcls")
+      //footer section
+      var bottom=document.createElement("footer")
+      console.log(bottom)
+      bottom.innerHTML="<h3></h3>"
+      bottom.classList.add("footer")
+      header.append(architect,nav)
+      document.body.append(header,section1,project,container,about,about_content,container1,img4,bottom)
+    </script>
+</body>
+</html>
